@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Mascota</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Agregar Mascota</h1>
+    <form method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="especie">Especie:</label>
+        <input type="text" id="especie" name="especie"><br>
+
+        <label for="raza">Raza:</label>
+        <input type="text" id="raza" name="raza"><br>
+
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad"><br>
+
+        
+        <label for="id_cliente">Cliente:</label>
+        <input type="text" id="id_cliente" name="id_cliente"><br>
+
+        <button type="submit">Agregar mascota</button>
+
+        
+    </form>
+    <a href="{{ url_for('index') }}">index</a>
+    
+
+</body>
+</html>

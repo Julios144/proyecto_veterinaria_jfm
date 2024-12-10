@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos de la Mascota</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Mascota</h1>
+    <a href="{{ url_for('agregar_mascota') }}">Agregar Servicio</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Id_Cliente</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for servicio in servicios %}
+            <tr>
+                <td>{{ servicio[1] }}</td>
+                <td>{{ servicio[2] }}</td>
+                <td>{{ servicio[3] }}</td>
+                <td>{{ servicio[4] }}</td>
+                <td>{{ servicio[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+        
+    </table>
+    <a href="{{ url_for('index') }}">index</a>
+</body>
+</html>

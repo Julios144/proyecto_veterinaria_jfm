@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Veterinaria</h1>
+        <nav>
+            <a href="{{ url_for('agregar_cliente') }}">Agregar Cliente</a> |
+            <a href="{{ url_for('mascota') }}">Mascota</a> |
+            <a href="{{ url_for('peluqueria') }}">Peluquería</a> |
+            <a href="{{ url_for('inventario') }}">Inventario</a> |
+            <a href="{{ url_for('servicios_medicos') }}">Servicios Médicos</a>
+        </nav>
+    </header>
+    <h2>Clientes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente[1] }}</td>
+                <td>{{ cliente[2] }}</td>
+                <td>{{ cliente[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

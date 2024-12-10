@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Cliente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Agregar Servicio Médico</h1>
+    <form method="POST">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"><br>
+
+        <label for="motivo">Motivo:</label>
+        <input type="text" id="motivo" name="motivo" required><br>
+
+        <label for="id_cliente">id_Cliente:</label>
+        <input type="text" id="id_cliente" name="id_cliente"><br>
+
+        <label for="id_mascota">id_Mascota:</label>
+        <input type="text" id="id_mascota" name="id_mascota"><br>
+
+        
+
+        <button type="submit">Agregar Cliente</button>
+
+        
+    </form>
+    <a href="{{ url_for('index') }}">index</a>
+    
+
+</body>
+</html>

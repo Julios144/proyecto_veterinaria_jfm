@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios Médicos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Servicios Médicos</h1>
+    <a href="{{ url_for('agregar_cita') }}">Agregar Cita</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Motivo</th>
+                <th>Cliente</th>
+                <th>Mascota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cita in citas %}
+            <tr>
+                <td>{{ cita[1] }}</td>
+                <td>{{ cita[2] }}</td>
+                <td>{{ cita[3] }}</td>
+                <td>{{ cita[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('index') }}">index</a>
+</body>
+</html>
